@@ -1,6 +1,6 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required
-from models import db, Episode, Appearance
+from server.models.episode import Episode
 from werkzeug import exceptions
 
 bp = Blueprint('episodes', __name__, url_prefix='/episodes')

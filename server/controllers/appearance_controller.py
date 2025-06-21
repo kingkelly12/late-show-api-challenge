@@ -1,6 +1,7 @@
 from flask import Blueprint, request, jsonify
-from flask_jwt_extended import jwt_required
-from models import db, Appearance, Guest, Episode
+from flask_jwt_extended import create_access_token, jwt_required
+from server.models.user import User  
+from server import db  
 from werkzeug import exceptions
 
 bp = Blueprint('appearances', __name__, url_prefix='/appearances')

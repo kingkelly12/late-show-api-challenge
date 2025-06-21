@@ -1,5 +1,5 @@
 from flask import Blueprint, jsonify
-from models import Guest
+from server.models.guest import Guest
 from werkzeug import exceptions
 
 bp = Blueprint('guests', __name__, url_prefix='/guests')
